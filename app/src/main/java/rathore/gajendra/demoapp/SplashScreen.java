@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -12,6 +14,16 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // to remove action bar
+
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        android.support.v7.app.ActionBar
+                AB= getSupportActionBar();
+        AB.hide();
+        //end
+
         setContentView(R.layout.activity_splash_screen);
 
         new Handler().postDelayed(new Runnable() {
