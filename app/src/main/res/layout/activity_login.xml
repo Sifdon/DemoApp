@@ -30,7 +30,7 @@
                       android:drawableLeft="@drawable/usr"
                       android:inputType="textEmailAddress"
                       android:hint="     Email"
-                      android:textColor="#1c87ca" />
+                      android:textColor="#565656" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Password Label -->
@@ -44,7 +44,7 @@
                       android:layout_height="wrap_content"
                       android:inputType="textPassword"
                       android:drawableLeft="@drawable/pswrd"
-                      android:textColor="#1c87ca"
+                      android:textColor="#565656"
                       android:drawableRight="@drawable/eyeoff"
                       android:onClick="showmePass"
                       android:hint="     Password"/>
