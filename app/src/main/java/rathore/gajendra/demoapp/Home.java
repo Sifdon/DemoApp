@@ -1,7 +1,9 @@
 package rathore.gajendra.demoapp;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.GridLayout;
@@ -17,6 +19,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -30,11 +34,6 @@ public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    RecyclerView mRecyclerView;
-    RecyclerView.LayoutManager mLayoutManager;
-    RecyclerView.Adapter mAdapter;
-    ArrayList<String> alName;
-    ArrayList<Integer> alImage;
 
 
     /**
@@ -42,32 +41,111 @@ public class Home extends AppCompatActivity
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-
+    ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        img=(ImageView)findViewById(R.id.img1);
 
+        new Handler().postDelayed(new Runnable() {
 
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
 
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe2);
+            }
+        }, 5000);
+        new Handler().postDelayed(new Runnable() {
 
-        alName = new ArrayList<>(Arrays.asList("Adidas", "Nike", "Adidas", "Puma", "Adidas", "Skechers", "Vans", "Reeok"));
-        alImage = new ArrayList<>(Arrays.asList(R.drawable.shoe1, R.drawable.shoe2, R.drawable.shoe3, R.drawable.shoe4, R.drawable.shoe5, R.drawable.shoe6, R.drawable.shoe7, R.drawable.shoe8));
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
 
-        // Calling the RecyclerView
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mRecyclerView.setHasFixedSize(true);
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe3);
+            }
+        }, 10000);
+        new Handler().postDelayed(new Runnable() {
 
-        // The number of Columns
-        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        mRecyclerView.setLayoutManager(mLayoutManager);
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
 
-        mAdapter = new HLVAdapter(Home.this, alName, alImage);
-        mRecyclerView.setAdapter(mAdapter);
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe4);
+            }
+        }, 15000);
+        new Handler().postDelayed(new Runnable() {
 
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
 
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe5);
+            }
+        }, 20000);
+        new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe6);
+            }
+        }, 25000);
+        new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe7);
+            }
+        }, 30000);
+        new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe8);
+            }
+        }, 35000);
+        new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                img.setImageResource(R.drawable.shoe9);
+            }
+        }, 40000);
 
 
 

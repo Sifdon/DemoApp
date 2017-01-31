@@ -21,7 +21,6 @@ public class Login extends AppCompatActivity {
 
     EditText txtEmailAddress;
     EditText txtPassword;
-    EditText txtPasswords;
     FirebaseAuth firebaseAuth;
     Button btnLogin;
     TextView txLink;
