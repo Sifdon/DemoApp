@@ -71,7 +71,7 @@ public class Home extends AppCompatActivity
 
             @Override
             public void run() {
-                img.setImageResource(R.drawable.shoe3);
+                img.setImageResource(R.drawable.shoe1);
             }
         }, 10000);
         new Handler().postDelayed(new Runnable() {
@@ -83,7 +83,7 @@ public class Home extends AppCompatActivity
 
             @Override
             public void run() {
-                img.setImageResource(R.drawable.shoe4);
+                img.setImageResource(R.drawable.shoe3);
             }
         }, 15000);
         new Handler().postDelayed(new Runnable() {
@@ -216,7 +216,10 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
+            Intent a = new Intent(this,Product_1.class);
+            startActivity(a);
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

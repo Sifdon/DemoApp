@@ -12,6 +12,8 @@
     android:background="#e74061"
     android:gravity="center"
     tools:context="rathore.gajendra.demoapp.SplashScreen">
+
+
     <ImageView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="43dp"
     android:paddingLeft="2.5dp"
     android:paddingRight="2.5dp"
     tools:context=".Home">
@@ -12,5 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:src="@drawable/shoe1"
+        android:gravity="center"
+        android:scaleType="fitStart"
         android:id="@+id/img1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:layout_below="@+id/img1"
+        android:background="#3cb1f5"
+        android:layout_marginTop="2dp"/>
 </RelativeLayout>
