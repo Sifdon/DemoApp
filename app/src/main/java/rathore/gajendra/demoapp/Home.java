@@ -48,6 +48,8 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
         img=(ImageView)findViewById(R.id.img1);
 
         new Handler().postDelayed(new Runnable() {

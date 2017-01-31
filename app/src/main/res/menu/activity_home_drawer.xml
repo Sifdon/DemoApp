@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_Casual"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/drawer_ico"
             android:title="Casual Shoes"/>
         <item
             android:id="@+id/nav_sports"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/drawer_ico2"
             android:title="Sports Shoes"/>
 
         <item
             android:id="@+id/nav_formal"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/drawer_ico"
             android:title="Formal Shoes"/>
         <item
             android:id="@+id/nav_loafers"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/drawer_ico2"
             android:title="Loafers"/>
 
         <item
             android:id="@+id/nav_flips"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/drawer_ico"
             android:title="Flip Flops"/>
 
         <item
             android:id="@+id/nav_watch"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/drawer_ico2"
             android:title="Watches"/>
     </group>
 
