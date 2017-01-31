@@ -215,20 +215,20 @@ public class Home extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_Casual) {
 
             Intent a = new Intent(this,Product_1.class);
             startActivity(a);
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_sports) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_formal) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_loafers) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_flips) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_watch) {
 
         }
 
