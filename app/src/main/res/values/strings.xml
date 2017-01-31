@@ -5,4 +5,19 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string-array name="ProductsList">
+        <item>Puma Green and Navy Flip-Flops</item>
+        <item>United Colors of Benetton Men Blue and Green Flip-Flops</item>
+        <item>Crocs Unisex Navy Blue Athens li Flip-Flops</item>
+        <item>Puma men grey and blue Flip-Flops</item>
+        <item>FILA MEn Navy and White Printed Flip-Flops</item>
+        <item>Nike Men Blue Printed Chroma Thong 5 Flip-Flops</item>
+        <item>Adidas Adi Rib Flip-Flops</item>
+        <item>Woodland Mens Printed Flip-Flops</item>
+        <item>Adidas Men Beach Cork FLip-Flops</item>
+        <item>Nike Men Aquaswift Flip-Flop</item>
+        <item>Puma Men Wave II Flip-Flops</item>
+        <item>FILA Men Vint Flip-Flops</item>
+        <item>Tommy Hilfiger Men Printed Flip-Flops</item>
+    </string-array>
 </resources>
