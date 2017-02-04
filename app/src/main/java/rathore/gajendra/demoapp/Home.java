@@ -1,15 +1,10 @@
 package rathore.gajendra.demoapp;
-import android.content.Context;
-import android.content.Intent;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.GridLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.AttributeSet;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,18 +15,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
-
+import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
 
-public class Home extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity  {
 
 
 
@@ -42,22 +34,110 @@ public class Home extends AppCompatActivity
      */
     private GoogleApiClient client;
     ImageView img;
+
+    DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView leftNavigationView = (NavigationView) findViewById(R.id.nav_left_view);
+        leftNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                // Handle Left navigation view item clicks here.
+                int id = item.getItemId();
+
+                if (id == R.id.nav_Casual) {
+                    Toast.makeText(Home.this, "Left Drawer - Import", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_sports) {
+                    Toast.makeText(Home.this, "Left Drawer - Gallery", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_formal) {
+                    Toast.makeText(Home.this, "Left Drawer - Slideshow", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_loafers) {
+                    Toast.makeText(Home.this, "Left Drawer - Tools", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_flips) {
+                    Toast.makeText(Home.this, "Left Drawer - Share", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_watch ) {
+                    Toast.makeText(Home.this, "Left Drawer - Send", Toast.LENGTH_SHORT).show();
+                }
+
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
+        NavigationView rightNavigationView = (NavigationView) findViewById(R.id.nav_right_view);
+        rightNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                // Handle Right navigation view item clicks here.
+                int id = item.getItemId();
+
+                if (id == R.id.nav_settings) {
+                    Toast.makeText(Home.this, "Right Drawer - Settings", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_logout) {
+                    Toast.makeText(Home.this, "Right Drawer - Logout", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_help) {
+                    Toast.makeText(Home.this, "Right Drawer - Help", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.nav_about) {
+                    Toast.makeText(Home.this, "Right Drawer - About", Toast.LENGTH_SHORT).show();
+                }
+
+                drawer.closeDrawer(GravityCompat.END); /*Important Line*/
+                return true;
+            }
+        });
+
+
         img=(ImageView)findViewById(R.id.img1);
 
         new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
             @Override
             public void run() {
                 img.setImageResource(R.drawable.shoe2);
             }
         }, 5000);
         new Handler().postDelayed(new Runnable() {
-@Override
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
             public void run() {
                 img.setImageResource(R.drawable.shoe3);
             }
@@ -134,48 +214,23 @@ public class Home extends AppCompatActivity
                 img.setImageResource(R.drawable.shoe9);
             }
         }, 40000);
-
-
-
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
+
 
 
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        } else if (drawer.isDrawerOpen(GravityCompat.END)) {  /*Closes the Appropriate Drawer*/
+            drawer.closeDrawer(GravityCompat.END);
         } else {
             super.onBackPressed();
+            System.exit(0);
         }
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -191,37 +246,16 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_openRight) {
+            drawer.openDrawer(GravityCompat.END);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-/*
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 
 
     /**
