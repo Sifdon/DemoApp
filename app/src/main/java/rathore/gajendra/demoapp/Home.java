@@ -1,5 +1,6 @@
 package rathore.gajendra.demoapp;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -75,7 +76,11 @@ public class Home extends AppCompatActivity  {
                 int id = item.getItemId();
 
                 if (id == R.id.nav_Casual) {
-                    Toast.makeText(Home.this, "Left Drawer - Import", Toast.LENGTH_SHORT).show();
+                    // from Home page to Product page 1
+                    Intent a= new Intent(Home.this,Product_1.class);
+                    startActivity(a);
+
+
                 } else if (id == R.id.nav_sports) {
                     Toast.makeText(Home.this, "Left Drawer - Gallery", Toast.LENGTH_SHORT).show();
                 } else if (id == R.id.nav_formal) {
