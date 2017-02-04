@@ -20,7 +20,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -43,8 +42,6 @@ public class Home extends AppCompatActivity
      */
     private GoogleApiClient client;
     ImageView img;
-    TextView search;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,19 +49,6 @@ public class Home extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         img=(ImageView)findViewById(R.id.img1);
-        search=(TextView)findViewById(R.id.tvSearch);
-
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent inte=new Intent(Home.this,Search.class);
-                //mstartActivity(inte);
-            }
-        });
-
-
-
-
 
         new Handler().postDelayed(new Runnable() {
 
@@ -87,7 +71,7 @@ public class Home extends AppCompatActivity
 
             @Override
             public void run() {
-                img.setImageResource(R.drawable.shoe1);
+                img.setImageResource(R.drawable.shoe3);
             }
         }, 10000);
         new Handler().postDelayed(new Runnable() {
@@ -99,7 +83,7 @@ public class Home extends AppCompatActivity
 
             @Override
             public void run() {
-                img.setImageResource(R.drawable.shoe3);
+                img.setImageResource(R.drawable.shoe4);
             }
         }, 15000);
         new Handler().postDelayed(new Runnable() {
@@ -232,10 +216,7 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-
-            Intent a = new Intent(this,Product_1.class);
-            startActivity(a);
-
+            // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
