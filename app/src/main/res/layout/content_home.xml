@@ -10,23 +10,28 @@
         android:layout_height="wrap_content"
         android:paddingTop="75dp"
         android:paddingBottom="10dp"
+        android:id="@+id/search_home"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:background="@color/colorPrimary">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:background="@drawable/rectbox"
             android:drawableLeft="@drawable/search"
-            android:text="  Search Producs and Brands..."/>
+            android:text="  Search Your Dil Ki Deal.."
+            android:textStyle="bold"/>
         </LinearLayout>
+
     <ImageView
         android:layout_height="176dp"
+        android:padding="1sp"
         android:layout_width="match_parent"
         android:src="@drawable/shoe1"
         android:id="@+id/img1"/>
