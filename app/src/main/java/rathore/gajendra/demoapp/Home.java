@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -26,17 +27,14 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 public class Home extends AppCompatActivity  {
 
-
-
-
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
     ImageView img;
-
     DrawerLayout drawer;
+    LinearLayout lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +52,19 @@ public class Home extends AppCompatActivity  {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
+        // on Click Search view on the Home page.
+
+        lv= (LinearLayout)findViewById(R.id.search_home);
+        lv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a= new Intent(Home.this,Search.class);
+                startActivity(a);
+            }
+        });
+
+        //end
+
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -68,9 +79,8 @@ public class Home extends AppCompatActivity  {
                 int id = item.getItemId();
 
                 if (id == R.id.nav_Casual) {
-                    // from Home page to Product page 1
-                    Intent a= new Intent(Home.this,Product_1.class);
-                    startActivity(a);
+
+
 
 
                 } else if (id == R.id.nav_sports) {
@@ -215,8 +225,6 @@ public class Home extends AppCompatActivity  {
 
 
 
-
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -290,4 +298,6 @@ public class Home extends AppCompatActivity  {
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
+
+
 }
