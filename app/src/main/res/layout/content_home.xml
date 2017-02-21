@@ -52,6 +52,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="3dp"
                 android:src="@drawable/ic_home_black_24dp"
                 android:id="@+id/home"/>
         </LinearLayout>
@@ -63,6 +64,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="3dp"
                 android:src="@drawable/ic_loyalty_black_24dp"
                 android:id="@+id/offers"/>
         </LinearLayout>
@@ -75,6 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/wishlist"
+                android:layout_margin="3dp"
                 android:id="@+id/wishlist"/>
         </LinearLayout>
         <LinearLayout
@@ -86,7 +89,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_notifications_black_24dp"
-                android:id="@+id/notification"/>
+                android:id="@+id/notification"
+                android:layout_margin="3dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,7 +101,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_cart"
-                android:id="@+id/cart"/>
+                android:id="@+id/cart"
+                android:layout_margin="3dp"/>
         </LinearLayout>
 
     </LinearLayout>
