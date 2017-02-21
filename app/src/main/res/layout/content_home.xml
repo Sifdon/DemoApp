@@ -74,7 +74,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/favheart"
+                android:src="@drawable/wishlist"
                 android:id="@+id/wishlist"/>
         </LinearLayout>
         <LinearLayout
@@ -96,7 +96,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_local_grocery_store_black_24dp"
+                android:src="@drawable/ic_cart"
                 android:id="@+id/cart"/>
         </LinearLayout>
 
