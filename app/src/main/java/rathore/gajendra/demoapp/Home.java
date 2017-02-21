@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -34,8 +35,12 @@ public class Home extends AppCompatActivity  {
     private GoogleApiClient client;
     ImageView img;
     DrawerLayout drawer;
-    LinearLayout lv;
-
+    TextView lv;
+    ImageView notification;
+    ImageView cart;
+    ImageView wishlist;
+    ImageView offers;
+    ImageView home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,18 +48,57 @@ public class Home extends AppCompatActivity  {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        notification=(ImageView)findViewById(R.id.notification);
+        cart=(ImageView)findViewById(R.id.cart);
+        wishlist=(ImageView)findViewById(R.id.wishlist);
+        offers=(ImageView)findViewById(R.id.offers);
+        home=(ImageView)findViewById(R.id.home);
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Home.this,listitems.class);
+                intent.putExtra("open_now","notification");
+                startActivity(intent);
+            }
+        });
+        offers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Home.this,listitems.class);
+                intent.putExtra("open_now","offers");
+                startActivity(intent);
+            }
+        });
+        wishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Home.this,listitems.class);
+                intent.putExtra("open_now","wishlist");
+                startActivity(intent);
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Home.this,ProductView.class);
+                intent.putExtra("open_now","cart");
+                startActivity(intent);
+            }
+        });
 
 
 
 
-     
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
         // on Click Search view on the Home page.
 
-        lv= (LinearLayout)findViewById(R.id.search_home);
+        lv= (TextView)findViewById(R.id.searchBar);
+
         lv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

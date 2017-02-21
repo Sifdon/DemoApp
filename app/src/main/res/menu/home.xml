@@ -5,6 +5,6 @@
         android:id="@+id/action_openRight"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        android:icon="@drawable/var"
+        android:icon="@drawable/ic_wrap_text_black_24dp"
         app:showAsAction="always" />
 </menu>

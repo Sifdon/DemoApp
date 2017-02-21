@@ -5,6 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="prizeAP"><strike>2000</strike></string>
 
     <string-array name="ProductsList">
         <item>Puma Green and Navy Flip-Flops</item>
@@ -21,4 +22,6 @@
         <item>FILA Men Vint Flip-Flops</item>
         <item>Tommy Hilfiger Men Printed Flip-Flops</item>
     </string-array>
+    <string name="title_activity_product_view">ProductView</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
