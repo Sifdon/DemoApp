@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ProductView extends AppCompatActivity {
@@ -36,13 +37,99 @@ public class ProductView extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private ImageView wishlistImg;
+    private LinearLayout size6;
+    private LinearLayout size7;
+    private LinearLayout size8;
+    private LinearLayout size9;
+    private LinearLayout size10;
+    private LinearLayout size11;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_view);
         wishlistImg=(ImageView)findViewById(R.id.product_wishlist);
+        size6=(LinearLayout)findViewById(R.id.size6);
+        size7=(LinearLayout)findViewById(R.id.size7);
+        size8=(LinearLayout)findViewById(R.id.size8);
+        size9=(LinearLayout)findViewById(R.id.size9);
+        size10=(LinearLayout)findViewById(R.id.size10);
+        size11=(LinearLayout)findViewById(R.id.size11);
+        final TextView tvnew=(TextView)findViewById(R.id.myid);
 
+        size6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                size6.setBackgroundResource(R.drawable.ic_circle2);
+                size7.setBackgroundResource(R.drawable.ic_cirle);
+                size8.setBackgroundResource(R.drawable.ic_cirle);
+                size9.setBackgroundResource(R.drawable.ic_cirle);
+                size10.setBackgroundResource(R.drawable.ic_cirle);
+                size11.setBackgroundResource(R.drawable.ic_cirle);
+            }
+        });
+
+        size7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                size7.setBackgroundResource(R.drawable.ic_circle2);
+                size6.setBackgroundResource(R.drawable.ic_cirle);
+                size8.setBackgroundResource(R.drawable.ic_cirle);
+                size9.setBackgroundResource(R.drawable.ic_cirle);
+                size10.setBackgroundResource(R.drawable.ic_cirle);
+                size11.setBackgroundResource(R.drawable.ic_cirle);
+            }
+        });
+
+        size8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                size8.setBackgroundResource(R.drawable.ic_circle2);
+                size7.setBackgroundResource(R.drawable.ic_cirle);
+                size6.setBackgroundResource(R.drawable.ic_cirle);
+                size9.setBackgroundResource(R.drawable.ic_cirle);
+                size10.setBackgroundResource(R.drawable.ic_cirle);
+                size11.setBackgroundResource(R.drawable.ic_cirle);
+            }
+        });
+
+        size9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                size9.setBackgroundResource(R.drawable.ic_circle2);
+                size7.setBackgroundResource(R.drawable.ic_cirle);
+                size8.setBackgroundResource(R.drawable.ic_cirle);
+                size6.setBackgroundResource(R.drawable.ic_cirle);
+                size10.setBackgroundResource(R.drawable.ic_cirle);
+                size11.setBackgroundResource(R.drawable.ic_cirle);
+            }
+        });
+
+        size10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                size10.setBackgroundResource(R.drawable.ic_circle2);
+                size7.setBackgroundResource(R.drawable.ic_cirle);
+                size8.setBackgroundResource(R.drawable.ic_cirle);
+                size9.setBackgroundResource(R.drawable.ic_cirle);
+                size6.setBackgroundResource(R.drawable.ic_cirle);
+                size11.setBackgroundResource(R.drawable.ic_cirle);
+            }
+        });
+
+        size11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                size11.setBackgroundResource(R.drawable.ic_circle2);
+                size7.setBackgroundResource(R.drawable.ic_cirle);
+                size8.setBackgroundResource(R.drawable.ic_cirle);
+                size9.setBackgroundResource(R.drawable.ic_cirle);
+                size10.setBackgroundResource(R.drawable.ic_cirle);
+                size6.setBackgroundResource(R.drawable.ic_cirle);
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -110,8 +197,10 @@ public class ProductView extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_product_view, container, false);
             ImageView imageView = (ImageView) rootView.findViewById(R.id.section_label);
+
             if(getArguments().getInt(ARG_SECTION_NUMBER)==1){
                 imageView.setImageResource(R.drawable.sone);
+
             }
             if(getArguments().getInt(ARG_SECTION_NUMBER)==2){
                 imageView.setImageResource(R.drawable.stwo);

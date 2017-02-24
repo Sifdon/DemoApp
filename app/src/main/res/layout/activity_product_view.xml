@@ -20,6 +20,7 @@
         android:layout_height="0.5dp"
         android:layout_marginTop="401dp"
         android:background="#b3b2b2"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,7 +86,7 @@
                 android:paddingLeft="16dp"
                 android:text="₹999"
                 android:id="@+id/productSP"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textSize="17dp"
                 />
             <TextView
@@ -157,78 +158,85 @@
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
                 android:foregroundGravity="center"
+                android:id="@+id/size6"
                 android:gravity="center">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:text="6"
-                    android:textStyle="bold"/>
+                    android:id="@+id/myid"
+                    android:textStyle="normal"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:id="@+id/size7"
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
                 android:gravity="center">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:text="7"
-                    android:textStyle="bold"/>
+                    android:textStyle="normal"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
-                android:gravity="center">
+                android:gravity="center"
+                android:id="@+id/size8">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:text="8"
-                    android:textStyle="bold"/>
+                    android:textStyle="normal"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
-                android:gravity="center">
+                android:gravity="center"
+                android:id="@+id/size9">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:text="9"
-                    android:textStyle="bold"/>
+                    android:textStyle="normal"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
-                android:gravity="center">
+                android:gravity="center"
+                android:id="@+id/size10">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:text="10"
-                    android:textStyle="bold"/>
+                    android:textStyle="normal"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
-                android:gravity="center">
+                android:gravity="center"
+                android:id="@+id/size11">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:text="11"
-                    android:textStyle="bold"/>
+                    android:textStyle="normal"/>
             </LinearLayout>
 
         </LinearLayout>
