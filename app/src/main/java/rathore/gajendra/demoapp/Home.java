@@ -35,58 +35,27 @@ public class Home extends AppCompatActivity  {
     ImageView img;
     DrawerLayout drawer;
     LinearLayout lv;
-    ImageView cart;
-    ImageView wishlist;
-    ImageView notification;
-    ImageView offers;
-    ImageView toHome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        cart=(ImageView)findViewById(R.id.cart);
-        wishlist=(ImageView)findViewById(R.id.wishlist);
-        notification=(ImageView)findViewById(R.id.notification);
-        offers=(ImageView)findViewById(R.id.offers);
-        toHome=(ImageView)findViewById(R.id.home);
-
-        cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this,ProductView.class));
-            }
-        });
-        wishlist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this,listitems.class));
-            }
-        });
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this,listitems.class));
-            }
-        });
-        offers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this,listitems.class));
-            }
-        });
-        toHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this,Home.class));
-            }
-        });
 
 
 
 
-     
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
