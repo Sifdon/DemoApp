@@ -172,6 +172,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/size7"
+                android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:background="@drawable/ic_cirle"
                 android:gravity="center">
