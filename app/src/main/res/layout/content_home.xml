@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
+                android:background="#dadada"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 tools:context=".Home">
@@ -18,28 +19,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:background="@drawable/rectbox"
             android:drawableLeft="@drawable/search"
-            android:text="  Search Your Dil Ki Deal.."
+            android:text="  Heaven Under Feet..."
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <ImageView
-        android:layout_height="176dp"
-        android:layout_below="@+id/search_home"
-        android:padding="1sp"
-        android:layout_width="match_parent"
-        android:src="@drawable/shoe1"
-        android:id="@+id/img1"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:weightSum="5"
+        android:id="@+id/bottombar"
         android:padding="2dp"
         android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true">
@@ -100,5 +96,352 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_above="@+id/bottombar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_height="176dp"
+                android:layout_below="@+id/search_home"
+                android:padding="1sp"
+                android:layout_marginTop="110dp"
+                android:layout_width="match_parent"
+                android:src="@drawable/shoe1"
+                android:id="@+id/img1"/>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img1"
+            android:id="@+id/hlayout1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/layout1"
+                android:background="#305acc"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:weightSum="6">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="4dp"
+
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hd1"
+                            android:scaleType="fitXY"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vans Casual Sneaker"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Minimum 60% Off"
+                            android:textColor="#35b04a"
+                            android:textSize="13dp"
+                            android:layout_marginTop="115dp"
+                            android:gravity="center" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="4dp"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hd2"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vans Casual Sneaker"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Minimum 60% Off"
+                            android:textColor="#35b04a"
+                            android:textSize="13dp"
+                            android:layout_marginTop="115dp"
+                            android:gravity="center" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="4dp"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hd3"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vans Casual Sneaker"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Minimum 60% Off"
+                            android:textColor="#35b04a"
+                            android:textSize="13dp"
+                            android:layout_marginTop="115dp"
+                            android:gravity="center" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="4dp"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hd1"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vans Casual Sneaker"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Minimum 60% Off"
+                            android:textColor="#35b04a"
+                            android:textSize="13dp"
+                            android:layout_marginTop="115dp"
+                            android:gravity="center" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="4dp"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hd5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vans Casual Sneaker"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Minimum 60% Off"
+                            android:textColor="#35b04a"
+                            android:textSize="13dp"
+                            android:layout_marginTop="115dp"
+                            android:gravity="center" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hd6"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vans Casual Sneaker"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Minimum 60% Off"
+                            android:textColor="#35b04a"
+                            android:textSize="13dp"
+                            android:layout_marginTop="115dp"
+                            android:gravity="center" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout2"
+        android:layout_below="@+id/hlayout1"
+        android:layout_above="@+id/bottombar"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:background="#fff"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+
+            <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/homedisplay7"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FLAT PRICE SALE"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="225dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upto 60% Off"
+                android:layout_marginTop="247dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="17dp"/>
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>
